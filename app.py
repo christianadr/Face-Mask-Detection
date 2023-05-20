@@ -20,7 +20,7 @@ def draw_bounding_boxes(image, boxes, labels, confidences):
     draw = ImageDraw.Draw(image)
     for box, label, confidence in zip(boxes, labels, confidences):
         color = 'red' if label == 'NO-Mask' else 'green'  # Use red for no_mask, green for mask
-        draw.rectangle(box, outline=color, width=10)
+        draw.rectangle(box, outline=color, width=5)
         draw.text((box[0], box[1] - 20), f"{label}: {confidence:.2f}", fill=color)
     return image
 
