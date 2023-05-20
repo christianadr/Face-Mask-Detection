@@ -49,7 +49,7 @@ def main():
     else:
         default_image = 'assets/download.jpg'
         with col1:
-            st.image(default_image, caption='Default Image', use_column_width=True)
+            st.image(default_image, caption='Sample Image', use_column_width=True)
         with col2:
             image = Image.open(default_image)
             results = detection(image)
