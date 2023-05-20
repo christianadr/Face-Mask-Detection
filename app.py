@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image, ImageDraw
 import torch
-import cv2
 
 model = torch.hub.load('ultralytics/yolov5', 'custom', path='models/best.pt')
 
@@ -48,8 +47,8 @@ def main():
 
         st.success("Image successfully detected!")
     else:
+        default_image = Image.open('assets/download.jpg')
         with col1:
-            default_image = Image.open('assets/download.jpg')  # Replace 'path/to/default_image.jpg' with the actual path to your default image
             st.image(default_image, caption='Default Image', use_column_width=True)
         with col2:
             image = Image.open(default_image)
