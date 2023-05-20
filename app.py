@@ -47,7 +47,7 @@ def main():
 
         st.success("Image successfully detected!")
     else:
-        default_image = Image.open('assets/download.jpg')
+        default_image = 'assets/download.jpg'
         with col1:
             st.image(default_image, caption='Default Image', use_column_width=True)
         with col2:
